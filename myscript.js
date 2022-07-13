@@ -26,7 +26,18 @@ function func1() {
     counter++;
 
 }
+
+function func2() {
+    if (event.keyCode == 13) {
+        func1();
+    }
+
+}
 // function deleteHandler(e)
 
-
+input.addEventListener("keydown", func2);
 document.querySelector('button').addEventListener('click', func1);
+
+
+
+
