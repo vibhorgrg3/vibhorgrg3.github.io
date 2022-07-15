@@ -1,43 +1,86 @@
-const input = document.querySelector('input');
-var counter = 0;
-function func1() {
-    // console.log(document.querySelector('input').value);
-    const todoItem = document.querySelector('input').value;
+$('button').on('click', function () {
+    console.log($('button').text());
+    console.log("fe");
+})
 
-    const li = document.createElement('li');
-    const deleteBtn = document.createElement('button');
+$("#1").on('click', function () {
+    $('input').val($('input').val() + "1");
+})
+$("#2").on('click', function () {
+    $('input').val($('input').val() + "2");
+})
+$("#3").on('click', function () {
+    $('input').val($('input').val() + "3");
+})
+$("#4").on('click', function () {
+    $('input').val($('input').val() + "4");
+})
+$("#5").on('click', function () {
+    $('input').val($('input').val() + "5");
+})
+$("#6").on('click', function () {
+    $('input').val($('input').val() + "6");
+})
+$("#7").on('click', function () {
+    $('input').val($('input').val() + "7");
+})
+$("#8").on('click', function () {
+    $('input').val($('input').val() + "8");
+})
+$("#9").on('click', function () {
+    $('input').val($('input').val() + "9");
+})
+$("#0").on('click', function () {
+    $('input').val($('input').val() + "0");
+})
 
-    li.classList.add(`task`);
-    li.classList.add('px-2');
-    deleteBtn.classList.add('btn');
-    deleteBtn.classList.add('btn-danger');
-    deleteBtn.classList.add('rounded-pill');
+$("#c").on('click', function () {
+    $('input').val("");
+})
 
-    deleteBtn.innerHTML = `remove`;
+$("#plusOp").on('click', function () {
+    $('input').val($('input').val() + "+");
+})
 
-    deleteBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        e.target.parentNode.remove();
-    })
-    li.innerHTML = `<div><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">  ${todoItem} </div>`;
-    li.appendChild(deleteBtn);
-    document.querySelector('ul').appendChild(li);
-    input.value = "";
-    counter++;
 
-}
+$("#subOp").on('click', function () {
+    $('input').val($('input').val() + "-");
+})
 
-function func2() {
-    if (event.keyCode == 13) {
-        func1();
+$("#mulOp").on('click', function () {
+    $('input').val($('input').val() + "*");
+})
+
+$("#divOp").on('click', function () {
+    $('input').val($('input').val() + "/");
+})
+$("#modOp").on('click', function () {
+    $('input').val($('input').val() + "%");
+})
+
+$("#eq").on('click', function () {
+    let ans = 0;
+    try {
+        ans = eval($('input').val());
+        $('input').val(ans);
+    } catch (error) {
+        alert("enter valid expression");
+        $('input').val("");
     }
 
-}
-// function deleteHandler(e)
-
-input.addEventListener("keydown", func2);
-document.querySelector('button').addEventListener('click', func1);
+})
 
 
-
-
+$('input').on("keypress", function (event) {
+    if (event.which == 13) {
+        event.preventDefault();
+        let ans = 0;
+        try {
+            ans = eval($('input').val());
+            $('input').val(ans);
+        } catch (error) {
+            alert("enter valid expression");
+            $('input').val("");
+        }
+    }
+})
