@@ -1,47 +1,65 @@
-td {
-    text-align: center;
-    /* background-color: aqua; */
-}
-
-form {
-    display: flex;
-    justify-content: center;
-}
-
-button {
-    background-color: rgb(48, 47, 47);
-    width: 300px;
-    color: white;
-    font-size: 2em;
-    height: 100px;
-}
-
-.one {
-    width: 600px;
-}
-
-.orange {
-    background-color: orange;
-}
-
-input {
-    font-size: 3em;
-    width: 1200px;
-    height: 100px;
-    margin-left: 5px;
-}
-
 body {
-    color: white;
-    background-color: rgba(0, 0, 0, 0.945);
+    height: 100vh;
+    /* Created with https://www.css-gradient.com */
+    background: black;
+    color: wheat;
 }
 
-.flex {
+.task {
+    background: #237EE2;
+    background: -webkit-linear-gradient(top left, #237EE2, #ADCBCE);
+    background: -moz-linear-gradient(top left, #237EE2, #ADCBCE);
+    background: linear-gradient(to bottom right, #237EE2, #ADCBCE);
+    color: black;
+    margin-top: 10px;
+    margin-right: 10px;
+    border: 1px white solid;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    border-radius: 15px;
+    font-size: 20px;
+
+}
+
+.task>div>input {
+    margin-right: 12px;
+}
+
+.task>button {
+    width: 80px;
+    height: 30px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 2px;
+    color: black;
+}
+
+.inputSec>button {
+    height: 30px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 2px;
+    margin-left: 10px;
+}
+
+.myinput {
+    border-radius: 10px;
+    margin-left: 10px;
+}
+
+.inputSec {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 h1 {
-    text-align: center;
+    font-size: 60px;
+}
+
+hr {
+    margin: auto;
+    width: 80%;
 }
